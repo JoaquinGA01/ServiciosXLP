@@ -6,7 +6,7 @@
  <xs:element name="RegistrarVisitantesRequest">
   <xs:complexType>
    <xs:sequence>
-    <xs:element name="nombre" type="xs:int"/>
+    <xs:element name="nombre" type="xs:string"/>
    </xs:sequence>
   </xs:complexType>
  </xs:element>
@@ -21,7 +21,7 @@
  <xs:element name="BuscarRegistrosResponse">
   <xs:complexType>
    <xs:sequence>
-    <xs:element name="Tarea" maxOccurs="unbounded">
+    <xs:element name="Registro" maxOccurs="unbounded">
            <xs:complexType>
              <xs:sequence>
               <xs:element name="id" type="xs:int"></xs:element>

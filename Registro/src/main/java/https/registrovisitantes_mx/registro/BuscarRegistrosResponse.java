@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.16 a las 11:13:04 AM CDT 
+// Generado el: 2022.05.16 a las 12:12:03 PM CDT 
 //
 
 
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="Tarea" maxOccurs="unbounded"&gt;
+ *         &lt;element name="Registro" maxOccurs="unbounded"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -51,41 +51,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "tarea"
+    "registro"
 })
 @XmlRootElement(name = "BuscarRegistrosResponse")
 public class BuscarRegistrosResponse {
 
-    @XmlElement(name = "Tarea", required = true)
-    protected List<BuscarRegistrosResponse.Tarea> tarea;
+    @XmlElement(name = "Registro", required = true)
+    protected List<BuscarRegistrosResponse.Registro> registro;
 
     /**
-     * Gets the value of the tarea property.
+     * Gets the value of the registro property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the tarea property.
+     * This is why there is not a <CODE>set</CODE> method for the registro property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getTarea().add(newItem);
+     *    getRegistro().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link BuscarRegistrosResponse.Tarea }
+     * {@link BuscarRegistrosResponse.Registro }
      * 
      * 
      */
-    public List<BuscarRegistrosResponse.Tarea> getTarea() {
-        if (tarea == null) {
-            tarea = new ArrayList<BuscarRegistrosResponse.Tarea>();
+    public List<BuscarRegistrosResponse.Registro> getRegistro() {
+        if (registro == null) {
+            registro = new ArrayList<BuscarRegistrosResponse.Registro>();
         }
-        return this.tarea;
+        return this.registro;
     }
 
 
@@ -118,7 +118,7 @@ public class BuscarRegistrosResponse {
         "fechaDdMmAa",
         "parejas"
     })
-    public static class Tarea {
+    public static class Registro {
 
         protected int id;
         @XmlElement(required = true)
