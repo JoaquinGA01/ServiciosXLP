@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.17 a las 12:03:00 PM CDT 
+// Generado el: 2022.05.17 a las 12:49:50 PM CDT 
 //
 
 
-package https.registrovisitantes_mx.registro;
+package https.biblioteca_mx.biblioteca;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="Parejas" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Fecha-dd-mm-aa" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="parejas" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -40,15 +41,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "id",
     "nombre",
+    "fechaDdMmAa",
     "parejas"
 })
-@XmlRootElement(name = "ModificarRegistroRequest")
-public class ModificarRegistroRequest {
+@XmlRootElement(name = "RegistrarVisitantesRequest")
+public class RegistrarVisitantesRequest {
 
     protected int id;
     @XmlElement(required = true)
     protected String nombre;
-    @XmlElement(name = "Parejas", required = true)
+    @XmlElement(name = "Fecha-dd-mm-aa", required = true)
+    protected String fechaDdMmAa;
+    @XmlElement(required = true)
     protected String parejas;
 
     /**
@@ -89,6 +93,30 @@ public class ModificarRegistroRequest {
      */
     public void setNombre(String value) {
         this.nombre = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad fechaDdMmAa.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFechaDdMmAa() {
+        return fechaDdMmAa;
+    }
+
+    /**
+     * Define el valor de la propiedad fechaDdMmAa.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFechaDdMmAa(String value) {
+        this.fechaDdMmAa = value;
     }
 
     /**

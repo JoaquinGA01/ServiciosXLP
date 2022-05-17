@@ -2,15 +2,14 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.17 a las 12:03:00 PM CDT 
+// Generado el: 2022.05.17 a las 12:33:57 PM CDT 
 //
 
 
-package https.registrovisitantes_mx.registro;
+package https.biblioteca_mx.biblioteca;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="respuestaId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "respuestaId"
+    "id"
 })
-@XmlRootElement(name = "RegistrarVisitantesResponse")
-public class RegistrarVisitantesResponse {
+@XmlRootElement(name = "Request")
+public class Request {
 
-    @XmlElement(required = true)
-    protected String respuestaId;
+    protected int id;
 
     /**
-     * Obtiene el valor de la propiedad respuestaId.
+     * Obtiene el valor de la propiedad id.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getRespuestaId() {
-        return respuestaId;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Define el valor de la propiedad respuestaId.
+     * Define el valor de la propiedad id.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setRespuestaId(String value) {
-        this.respuestaId = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }

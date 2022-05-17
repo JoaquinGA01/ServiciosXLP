@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.17 a las 12:03:00 PM CDT 
+// Generado el: 2022.05.17 a las 12:49:50 PM CDT 
 //
 
 
-package https.registrovisitantes_mx.registro;
+package https.biblioteca_mx.biblioteca;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -17,7 +17,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the https.registrovisitantes_mx.registro package. 
+ * generated in the https.biblioteca_mx.biblioteca package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -31,10 +31,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BuscarRegistrosRequest_QNAME = new QName("https://registrovisitantes.mx/Registro", "BuscarRegistrosRequest");
+    private final static QName _BuscarRegistrosRequest_QNAME = new QName("https://Biblioteca.mx/Biblioteca", "BuscarRegistrosRequest");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: https.registrovisitantes_mx.registro
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: https.biblioteca_mx.biblioteca
      * 
      */
     public ObjectFactory() {
@@ -105,6 +105,54 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RegistrarReservacionesRequest }
+     * 
+     */
+    public RegistrarReservacionesRequest createRegistrarReservacionesRequest() {
+        return new RegistrarReservacionesRequest();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarReservacionesResponse }
+     * 
+     */
+    public RegistrarReservacionesResponse createRegistrarReservacionesResponse() {
+        return new RegistrarReservacionesResponse();
+    }
+
+    /**
+     * Create an instance of {@link BuscarReservacionesRequest }
+     * 
+     */
+    public BuscarReservacionesRequest createBuscarReservacionesRequest() {
+        return new BuscarReservacionesRequest();
+    }
+
+    /**
+     * Create an instance of {@link BuscarReservacionesResponse }
+     * 
+     */
+    public BuscarReservacionesResponse createBuscarReservacionesResponse() {
+        return new BuscarReservacionesResponse();
+    }
+
+    /**
+     * Create an instance of {@link BorrarReservacionesRequest }
+     * 
+     */
+    public BorrarReservacionesRequest createBorrarReservacionesRequest() {
+        return new BorrarReservacionesRequest();
+    }
+
+    /**
+     * Create an instance of {@link BorrarReservacionesResponse }
+     * 
+     */
+    public BorrarReservacionesResponse createBorrarReservacionesResponse() {
+        return new BorrarReservacionesResponse();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      * 
      * @param value
@@ -112,7 +160,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      */
-    @XmlElementDecl(namespace = "https://registrovisitantes.mx/Registro", name = "BuscarRegistrosRequest")
+    @XmlElementDecl(namespace = "https://Biblioteca.mx/Biblioteca", name = "BuscarRegistrosRequest")
     public JAXBElement<Object> createBuscarRegistrosRequest(Object value) {
         return new JAXBElement<Object>(_BuscarRegistrosRequest_QNAME, Object.class, null, value);
     }

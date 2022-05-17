@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://Biblioteca.mx/Biblioteca"
+ xmlns:tns="https://Biblioteca.mx/Biblioteca"
+ elementFormDefault="qualified">
+ <xs:element name="RegistrarVisitantesRequest">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="id" type="xs:int"/>
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="Fecha-dd-mm-aa" type="xs:string"/>
+    <xs:element name="parejas" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="RegistrarVisitantesResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="respuestaId" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="BuscarRegistrosRequest"/>
+ <xs:element name="BuscarRegistrosResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Registro" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+              <xs:element name="id" type="xs:int"></xs:element>
+              <xs:element name="nombre" type="xs:string"></xs:element>
+              <xs:element name="Fecha-dd-mm-aa" type="xs:string"/>
+              <xs:element name="Parejas" type="xs:string"/>
+             </xs:sequence>
+           </xs:complexType>
+       </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ModificarRegistroRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="Parejas" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ModificarRegistroResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="respuesta" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BorrarRegistroRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BorrarRegistroResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="respuesta" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="RegistrarReservacionesRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Nombre" type="xs:string"/>
+      <xs:element name="Concepto" type="xs:string"/>
+      <xs:element name="Fecha" type="xs:string"/>
+      <xs:element name="HoraInicio" type="xs:string"/>
+      <xs:element name="HoraFin" type="xs:string"/>
+      <xs:element name="Tiempo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="RegistrarReservacionesResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="respuesta" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BuscarReservacionesRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Nombre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="BuscarReservacionesResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="Nombre" type="xs:string"/>
+      <xs:element name="Concepto" type="xs:string"/>
+      <xs:element name="Fecha" type="xs:string"/>
+      <xs:element name="HoraInicio" type="xs:string"/>
+      <xs:element name="HoraFin" type="xs:string"/>
+      <xs:element name="Tiempo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BorrarReservacionesRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+ <xs:element name="BorrarReservacionesResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="respuesta" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+</xs:schema>
