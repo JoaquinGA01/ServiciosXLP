@@ -104,15 +104,21 @@
  <xs:element name="BuscarReservacionesResponse">
   <xs:complexType>
     <xs:sequence>
-      <xs:element name="id" type="xs:int"/>
-      <xs:element name="Nombre" type="xs:string"/>
-      <xs:element name="Concepto" type="xs:string"/>
-      <xs:element name="Fecha" type="xs:string"/>
-      <xs:element name="HoraInicio" type="xs:string"/>
-      <xs:element name="HoraFin" type="xs:string"/>
-      <xs:element name="Tiempo" type="xs:string"/>
+     <xs:element name="Reservacion" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+                <xs:element name="Nombre" type="xs:string"/>
+                <xs:element name="Concepto" type="xs:string"/>
+                <xs:element name="Fecha" type="xs:string"/>
+                <xs:element name="HoraInicio" type="xs:string"/>
+                <xs:element name="HoraFin" type="xs:string"/>
+                <xs:element name="Tiempo" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+        </xs:element>
     </xs:sequence>
-  </xs:complexType>
+   </xs:complexType>
  </xs:element>
 
  <xs:element name="BorrarReservacionesRequest">
