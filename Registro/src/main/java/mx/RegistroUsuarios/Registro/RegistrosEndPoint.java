@@ -13,7 +13,7 @@ public class RegistrosEndPoint {
     @Autowired
     private IRegistro IRegistros;
 
-    @PayloadRoot(namespace = "https://registrovisitantes.mx/registro", localPart = "RegistrarVisitantesRequest")
+    @PayloadRoot(namespace = "https://registrovisitantes.mx/Registro", localPart = "RegistrarVisitantesRequest")
     @ResponsePayload
     public RegistrarVisitantesResponse saludar(@RequestPayload RegistrarVisitantesRequest nombre){
         RegistrarVisitantesResponse respuesta = new RegistrarVisitantesResponse();
