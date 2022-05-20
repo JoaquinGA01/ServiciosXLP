@@ -1,7 +1,11 @@
 package mx.uv.t4is.Biblioteca;
 
+
+@Entity
 public class Reservacion {
-    protected int id;
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private int id;
     
         private String nombre;
     
