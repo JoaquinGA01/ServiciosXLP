@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.05.19 a las 08:46:11 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://Biblioteca.mx/Biblioteca">
+    <schemaBindings map="false">
+      <package name="https.biblioteca_mx.biblioteca"/>
+    </schemaBindings>
+    <bindings scd="tns:BuscarRegistrosResponse">
+      <class ref="https.biblioteca_mx.biblioteca.BuscarRegistrosResponse"/>
+    </bindings>
+    <bindings scd="tns:BuscarReservacionesResponse">
+      <class ref="https.biblioteca_mx.biblioteca.BuscarReservacionesResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesRequest">
+      <class ref="https.biblioteca_mx.biblioteca.RegistrarVisitantesRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesResponse">
+      <class ref="https.biblioteca_mx.biblioteca.RegistrarVisitantesResponse"/>
+    </bindings>
+    <bindings scd="tns:ModificarRegistroRequest">
+      <class ref="https.biblioteca_mx.biblioteca.ModificarRegistroRequest"/>
+    </bindings>
+    <bindings scd="tns:ModificarRegistroResponse">
+      <class ref="https.biblioteca_mx.biblioteca.ModificarRegistroResponse"/>
+    </bindings>
+    <bindings scd="tns:BorrarRegistroRequest">
+      <class ref="https.biblioteca_mx.biblioteca.BorrarRegistroRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarRegistroResponse">
+      <class ref="https.biblioteca_mx.biblioteca.BorrarRegistroResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarReservacionesRequest">
+      <class ref="https.biblioteca_mx.biblioteca.RegistrarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarReservacionesResponse">
+      <class ref="https.biblioteca_mx.biblioteca.RegistrarReservacionesResponse"/>
+    </bindings>
+    <bindings scd="tns:BuscarReservacionesRequest">
+      <class ref="https.biblioteca_mx.biblioteca.BuscarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarReservacionesRequest">
+      <class ref="https.biblioteca_mx.biblioteca.BorrarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarReservacionesResponse">
+      <class ref="https.biblioteca_mx.biblioteca.BorrarReservacionesResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

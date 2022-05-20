@@ -88,11 +88,12 @@
  <xs:element name="RegistrarReservacionesResponse">
   <xs:complexType>
     <xs:sequence>
-      <xs:element name="respuesta" type="xs:boolean"/>
+      <xs:element name="respuesta" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
  </xs:element>
 
+ 
  <xs:element name="BuscarReservacionesRequest">
   <xs:complexType>
     <xs:sequence>
