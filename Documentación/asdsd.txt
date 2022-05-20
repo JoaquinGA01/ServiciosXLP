@@ -1,0 +1,30 @@
+from ubuntu:latest
+workdir /tareasmatadoras 
+expose 8080 cmd ["/tareasmatadoras/mvnw", "spring-boot:run"] 
+run apt-get update 
+run apt-get install -y openjdk-16-jdk 
+run apt-get install -y curl 
+run apt-get install -y nano
+
+
+from ubuntu:20.04
+workdir /app
+run apt-get update
+run apt-get install -y openjdk-8-jdk 
+RUN apt-get install -y mariadb-server
+add script.sql /app/script.sql
+RUN chmod 755 /app/script.sql
+RUN /etc/init.d/mysql start; mysql < /app/script.sql
+
+
+CREATE DATABASE IF NOT EXISTS biblioteca;
+USE biblioteca;
+CREATE USER IF NOT EXISTS '789xxx'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON todolist.* TO '789xxx'@'localhost';
+FLUSH PRIVILEGES;
+
+
+#!/bin/sh
+
+/etc/init.d/mysql start
+java -jar /app/Biblioteca-0.0.1-SNAPSHOT.jar
