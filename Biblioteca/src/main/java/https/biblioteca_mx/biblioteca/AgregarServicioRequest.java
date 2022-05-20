@@ -25,9 +25,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="Parejas" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="motivo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="tiempo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,34 +39,22 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id",
     "nombre",
-    "parejas"
+    "motivo",
+    "tiempo",
+    "fecha"
 })
-@XmlRootElement(name = "ModificarRegistroRequest")
-public class ModificarRegistroRequest {
+@XmlRootElement(name = "AgregarServicioRequest")
+public class AgregarServicioRequest {
 
-    protected int id;
     @XmlElement(required = true)
     protected String nombre;
-    @XmlElement(name = "Parejas", required = true)
-    protected String parejas;
-
-    /**
-     * Obtiene el valor de la propiedad id.
-     * 
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Define el valor de la propiedad id.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
+    @XmlElement(required = true)
+    protected String motivo;
+    @XmlElement(required = true)
+    protected String tiempo;
+    @XmlElement(required = true)
+    protected String fecha;
 
     /**
      * Obtiene el valor de la propiedad nombre.
@@ -92,27 +81,75 @@ public class ModificarRegistroRequest {
     }
 
     /**
-     * Obtiene el valor de la propiedad parejas.
+     * Obtiene el valor de la propiedad motivo.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getParejas() {
-        return parejas;
+    public String getMotivo() {
+        return motivo;
     }
 
     /**
-     * Define el valor de la propiedad parejas.
+     * Define el valor de la propiedad motivo.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setParejas(String value) {
-        this.parejas = value;
+    public void setMotivo(String value) {
+        this.motivo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad tiempo.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTiempo() {
+        return tiempo;
+    }
+
+    /**
+     * Define el valor de la propiedad tiempo.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTiempo(String value) {
+        this.tiempo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad fecha.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFecha() {
+        return fecha;
+    }
+
+    /**
+     * Define el valor de la propiedad fecha.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFecha(String value) {
+        this.fecha = value;
     }
 
 }

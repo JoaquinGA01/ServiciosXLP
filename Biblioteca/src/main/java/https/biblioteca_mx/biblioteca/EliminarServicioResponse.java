@@ -10,6 +10,7 @@ package https.biblioteca_mx.biblioteca;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="respuesta" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="respuesta" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,24 +38,33 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "respuesta"
 })
-@XmlRootElement(name = "ModificarRegistroResponse")
-public class ModificarRegistroResponse {
+@XmlRootElement(name = "EliminarServicioResponse")
+public class EliminarServicioResponse {
 
-    protected boolean respuesta;
+    @XmlElement(required = true)
+    protected String respuesta;
 
     /**
      * Obtiene el valor de la propiedad respuesta.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public boolean isRespuesta() {
+    public String getRespuesta() {
         return respuesta;
     }
 
     /**
      * Define el valor de la propiedad respuesta.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRespuesta(boolean value) {
+    public void setRespuesta(String value) {
         this.respuesta = value;
     }
 

@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 08:52:13 PM CDT 
+// Generado el: 2022.05.20 a las 12:46:01 AM CDT 
 //
 
 
@@ -32,6 +32,7 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _BuscarRegistrosRequest_QNAME = new QName("https://Biblioteca.mx/Biblioteca", "BuscarRegistrosRequest");
+    private final static QName _ListarServicioRequest_QNAME = new QName("https://Biblioteca.mx/Biblioteca", "ListarServicioRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: https.biblioteca_mx.biblioteca
@@ -54,6 +55,14 @@ public class ObjectFactory {
      */
     public BuscarReservacionesResponse createBuscarReservacionesResponse() {
         return new BuscarReservacionesResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarServicioResponse }
+     * 
+     */
+    public ListarServicioResponse createListarServicioResponse() {
+        return new ListarServicioResponse();
     }
 
     /**
@@ -161,6 +170,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link AgregarServicioRequest }
+     * 
+     */
+    public AgregarServicioRequest createAgregarServicioRequest() {
+        return new AgregarServicioRequest();
+    }
+
+    /**
+     * Create an instance of {@link AgregarServicioResponse }
+     * 
+     */
+    public AgregarServicioResponse createAgregarServicioResponse() {
+        return new AgregarServicioResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarServicioResponse.Servicio }
+     * 
+     */
+    public ListarServicioResponse.Servicio createListarServicioResponseServicio() {
+        return new ListarServicioResponse.Servicio();
+    }
+
+    /**
+     * Create an instance of {@link EliminarServicioRequest }
+     * 
+     */
+    public EliminarServicioRequest createEliminarServicioRequest() {
+        return new EliminarServicioRequest();
+    }
+
+    /**
+     * Create an instance of {@link EliminarServicioResponse }
+     * 
+     */
+    public EliminarServicioResponse createEliminarServicioResponse() {
+        return new EliminarServicioResponse();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      * 
      * @param value
@@ -171,6 +220,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "https://Biblioteca.mx/Biblioteca", name = "BuscarRegistrosRequest")
     public JAXBElement<Object> createBuscarRegistrosRequest(Object value) {
         return new JAXBElement<Object>(_BuscarRegistrosRequest_QNAME, Object.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "https://Biblioteca.mx/Biblioteca", name = "ListarServicioRequest")
+    public JAXBElement<Object> createListarServicioRequest(Object value) {
+        return new JAXBElement<Object>(_ListarServicioRequest_QNAME, Object.class, null, value);
     }
 
 }

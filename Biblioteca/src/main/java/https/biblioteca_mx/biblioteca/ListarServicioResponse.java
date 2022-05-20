@@ -27,18 +27,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="Reservacion" maxOccurs="unbounded"&gt;
+ *         &lt;element name="servicio" maxOccurs="unbounded"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
  *                   &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *                   &lt;element name="Nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="Concepto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="Fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="HoraInicio" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="HoraFin" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="Tiempo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="motivo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="tiempo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
  *             &lt;/complexContent&gt;
@@ -54,41 +52,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "reservacion"
+    "servicio"
 })
-@XmlRootElement(name = "BuscarReservacionesResponse")
-public class BuscarReservacionesResponse {
+@XmlRootElement(name = "ListarServicioResponse")
+public class ListarServicioResponse {
 
-    @XmlElement(name = "Reservacion", required = true)
-    protected List<BuscarReservacionesResponse.Reservacion> reservacion;
+    @XmlElement(required = true)
+    protected List<ListarServicioResponse.Servicio> servicio;
 
     /**
-     * Gets the value of the reservacion property.
+     * Gets the value of the servicio property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the reservacion property.
+     * This is why there is not a <CODE>set</CODE> method for the servicio property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getReservacion().add(newItem);
+     *    getServicio().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link BuscarReservacionesResponse.Reservacion }
+     * {@link ListarServicioResponse.Servicio }
      * 
      * 
      */
-    public List<BuscarReservacionesResponse.Reservacion> getReservacion() {
-        if (reservacion == null) {
-            reservacion = new ArrayList<BuscarReservacionesResponse.Reservacion>();
+    public List<ListarServicioResponse.Servicio> getServicio() {
+        if (servicio == null) {
+            servicio = new ArrayList<ListarServicioResponse.Servicio>();
         }
-        return this.reservacion;
+        return this.servicio;
     }
 
 
@@ -103,12 +101,10 @@ public class BuscarReservacionesResponse {
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *       &lt;sequence&gt;
      *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
-     *         &lt;element name="Nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="Concepto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="Fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="HoraInicio" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="HoraFin" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="Tiempo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="motivo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="tiempo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
      *   &lt;/complexContent&gt;
@@ -121,27 +117,21 @@ public class BuscarReservacionesResponse {
     @XmlType(name = "", propOrder = {
         "id",
         "nombre",
-        "concepto",
-        "fecha",
-        "horaInicio",
-        "horaFin",
-        "tiempo"
+        "motivo",
+        "tiempo",
+        "fecha"
     })
-    public static class Reservacion {
+    public static class Servicio {
 
         protected int id;
-        @XmlElement(name = "Nombre", required = true)
+        @XmlElement(required = true)
         protected String nombre;
-        @XmlElement(name = "Concepto", required = true)
-        protected String concepto;
-        @XmlElement(name = "Fecha", required = true)
-        protected String fecha;
-        @XmlElement(name = "HoraInicio", required = true)
-        protected String horaInicio;
-        @XmlElement(name = "HoraFin", required = true)
-        protected String horaFin;
-        @XmlElement(name = "Tiempo", required = true)
+        @XmlElement(required = true)
+        protected String motivo;
+        @XmlElement(required = true)
         protected String tiempo;
+        @XmlElement(required = true)
+        protected String fecha;
 
         /**
          * Obtiene el valor de la propiedad id.
@@ -184,99 +174,27 @@ public class BuscarReservacionesResponse {
         }
 
         /**
-         * Obtiene el valor de la propiedad concepto.
+         * Obtiene el valor de la propiedad motivo.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getConcepto() {
-            return concepto;
+        public String getMotivo() {
+            return motivo;
         }
 
         /**
-         * Define el valor de la propiedad concepto.
+         * Define el valor de la propiedad motivo.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setConcepto(String value) {
-            this.concepto = value;
-        }
-
-        /**
-         * Obtiene el valor de la propiedad fecha.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getFecha() {
-            return fecha;
-        }
-
-        /**
-         * Define el valor de la propiedad fecha.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setFecha(String value) {
-            this.fecha = value;
-        }
-
-        /**
-         * Obtiene el valor de la propiedad horaInicio.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getHoraInicio() {
-            return horaInicio;
-        }
-
-        /**
-         * Define el valor de la propiedad horaInicio.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setHoraInicio(String value) {
-            this.horaInicio = value;
-        }
-
-        /**
-         * Obtiene el valor de la propiedad horaFin.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getHoraFin() {
-            return horaFin;
-        }
-
-        /**
-         * Define el valor de la propiedad horaFin.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setHoraFin(String value) {
-            this.horaFin = value;
+        public void setMotivo(String value) {
+            this.motivo = value;
         }
 
         /**
@@ -301,6 +219,30 @@ public class BuscarReservacionesResponse {
          */
         public void setTiempo(String value) {
             this.tiempo = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad fecha.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getFecha() {
+            return fecha;
+        }
+
+        /**
+         * Define el valor de la propiedad fecha.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setFecha(String value) {
+            this.fecha = value;
         }
 
     }
