@@ -1,0 +1,8 @@
+from ubuntu:latest 
+workdir /tareasmatadoras 
+expose 8080 
+cmd ["/tareasmatadoras/mvnw", "spring-boot:run"] 
+run apt-get update 
+run apt-get install -y openjdk-16-jdk 
+run apt-get install -y curl 
+run apt-get install -y nano
