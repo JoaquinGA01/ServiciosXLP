@@ -21,7 +21,7 @@ public class BibliotecaEndPoint {
     private IReservaciones Ireservaciones;
 
 
-    @PayloadRoot(namespace = "https://biblioteca.mx/Biblioteca", localPart = "RegistrarReservacionesRequest")
+    @PayloadRoot(namespace = "https://Biblioteca.mx/Biblioteca", localPart = "RegistrarReservacionesRequest")
     @ResponsePayload
     public RegistrarReservacionesResponse saludar(@RequestPayload RegistrarReservacionesRequest nombre){
         RegistrarReservacionesResponse respuesta = new RegistrarReservacionesResponse();
@@ -37,7 +37,7 @@ public class BibliotecaEndPoint {
         return respuesta;
     }
 
-    @PayloadRoot(namespace = "https://biblioteca.mx/Biblioteca", localPart = "BuscarReservacionesRequest")
+    @PayloadRoot(namespace = "https://Biblioteca.mx/Biblioteca", localPart = "BuscarReservacionesRequest")
     @ResponsePayload
     public BuscarReservacionesResponse buscarReservaciones(){
         BuscarReservacionesResponse respuesta = new BuscarReservacionesResponse();
