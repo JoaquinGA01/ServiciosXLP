@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 07:43:11 PM CDT 
+// Generado el: 2022.05.24 a las 12:39:37 AM CDT 
 //
 
 
@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "respuesta"
 })
-@XmlRootElement(name = "AgregarVisitantesResponse")
-public class AgregarVisitantesResponse {
+@XmlRootElement(name = "RegistrarArtistaResponse")
+public class RegistrarArtistaResponse {
 
     @XmlElement(required = true)
     protected String respuesta;

@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 07:43:11 PM CDT 
+// Generado el: 2022.05.24 a las 12:39:37 AM CDT 
 //
 
 
@@ -27,7 +27,9 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="estado" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="hora" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="costo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -40,17 +42,22 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "nombre",
     "descripcion",
-    "estado"
+    "fecha",
+    "hora",
+    "costo"
 })
-@XmlRootElement(name = "AgregarVisitantesRequest")
-public class AgregarVisitantesRequest {
+@XmlRootElement(name = "AgregarEventoRequest")
+public class AgregarEventoRequest {
 
     @XmlElement(required = true)
     protected String nombre;
     @XmlElement(required = true)
     protected String descripcion;
     @XmlElement(required = true)
-    protected String estado;
+    protected String fecha;
+    @XmlElement(required = true)
+    protected String hora;
+    protected int costo;
 
     /**
      * Obtiene el valor de la propiedad nombre.
@@ -101,27 +108,67 @@ public class AgregarVisitantesRequest {
     }
 
     /**
-     * Obtiene el valor de la propiedad estado.
+     * Obtiene el valor de la propiedad fecha.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEstado() {
-        return estado;
+    public String getFecha() {
+        return fecha;
     }
 
     /**
-     * Define el valor de la propiedad estado.
+     * Define el valor de la propiedad fecha.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEstado(String value) {
-        this.estado = value;
+    public void setFecha(String value) {
+        this.fecha = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad hora.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getHora() {
+        return hora;
+    }
+
+    /**
+     * Define el valor de la propiedad hora.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setHora(String value) {
+        this.hora = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad costo.
+     * 
+     */
+    public int getCosto() {
+        return costo;
+    }
+
+    /**
+     * Define el valor de la propiedad costo.
+     * 
+     */
+    public void setCosto(int value) {
+        this.costo = value;
     }
 
 }

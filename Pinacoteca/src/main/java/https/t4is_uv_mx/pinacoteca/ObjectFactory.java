@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 07:43:11 PM CDT 
+// Generado el: 2022.05.24 a las 12:39:37 AM CDT 
 //
 
 
@@ -31,7 +31,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ListarRequest_QNAME = new QName("https://t4is.uv.mx/pinacoteca", "ListarRequest");
+    private final static QName _ListarEventoRequest_QNAME = new QName("https://t4is.uv.mx/pinacoteca", "ListarEventoRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: https.t4is_uv_mx.pinacoteca
@@ -41,83 +41,67 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListarResponse }
+     * Create an instance of {@link ListarEventoResponse }
      * 
      */
-    public ListarResponse createListarResponse() {
-        return new ListarResponse();
+    public ListarEventoResponse createListarEventoResponse() {
+        return new ListarEventoResponse();
     }
 
     /**
-     * Create an instance of {@link AgregarVisitantesRequest }
+     * Create an instance of {@link RegistrarVisitantesRequest }
      * 
      */
-    public AgregarVisitantesRequest createAgregarVisitantesRequest() {
-        return new AgregarVisitantesRequest();
+    public RegistrarVisitantesRequest createRegistrarVisitantesRequest() {
+        return new RegistrarVisitantesRequest();
     }
 
     /**
-     * Create an instance of {@link AgregarVisitantesResponse }
+     * Create an instance of {@link RegistrarVisitantesResponse }
      * 
      */
-    public AgregarVisitantesResponse createAgregarVisitantesResponse() {
-        return new AgregarVisitantesResponse();
+    public RegistrarVisitantesResponse createRegistrarVisitantesResponse() {
+        return new RegistrarVisitantesResponse();
     }
 
     /**
-     * Create an instance of {@link AgregarEventosRequest }
+     * Create an instance of {@link RegistrarArtistaRequest }
      * 
      */
-    public AgregarEventosRequest createAgregarEventosRequest() {
-        return new AgregarEventosRequest();
+    public RegistrarArtistaRequest createRegistrarArtistaRequest() {
+        return new RegistrarArtistaRequest();
     }
 
     /**
-     * Create an instance of {@link AgregarEventosResponse }
+     * Create an instance of {@link RegistrarArtistaResponse }
      * 
      */
-    public AgregarEventosResponse createAgregarEventosResponse() {
-        return new AgregarEventosResponse();
+    public RegistrarArtistaResponse createRegistrarArtistaResponse() {
+        return new RegistrarArtistaResponse();
     }
 
     /**
-     * Create an instance of {@link EliminarRequest }
+     * Create an instance of {@link AgregarEventoRequest }
      * 
      */
-    public EliminarRequest createEliminarRequest() {
-        return new EliminarRequest();
+    public AgregarEventoRequest createAgregarEventoRequest() {
+        return new AgregarEventoRequest();
     }
 
     /**
-     * Create an instance of {@link EliminarResponse }
+     * Create an instance of {@link AgregarEventoResponse }
      * 
      */
-    public EliminarResponse createEliminarResponse() {
-        return new EliminarResponse();
+    public AgregarEventoResponse createAgregarEventoResponse() {
+        return new AgregarEventoResponse();
     }
 
     /**
-     * Create an instance of {@link ListarResponse.Actividad }
+     * Create an instance of {@link ListarEventoResponse.Evento }
      * 
      */
-    public ListarResponse.Actividad createListarResponseActividad() {
-        return new ListarResponse.Actividad();
-    }
-
-    /**
-     * Create an instance of {@link EditarRequest }
-     * 
-     */
-    public EditarRequest createEditarRequest() {
-        return new EditarRequest();
-    }
-
-    /**
-     * Create an instance of {@link EditarResponse }
-     * 
-     */
-    public EditarResponse createEditarResponse() {
-        return new EditarResponse();
+    public ListarEventoResponse.Evento createListarEventoResponseEvento() {
+        return new ListarEventoResponse.Evento();
     }
 
     /**
@@ -128,9 +112,9 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      */
-    @XmlElementDecl(namespace = "https://t4is.uv.mx/pinacoteca", name = "ListarRequest")
-    public JAXBElement<Object> createListarRequest(Object value) {
-        return new JAXBElement<Object>(_ListarRequest_QNAME, Object.class, null, value);
+    @XmlElementDecl(namespace = "https://t4is.uv.mx/pinacoteca", name = "ListarEventoRequest")
+    public JAXBElement<Object> createListarEventoRequest(Object value) {
+        return new JAXBElement<Object>(_ListarEventoRequest_QNAME, Object.class, null, value);
     }
 
 }

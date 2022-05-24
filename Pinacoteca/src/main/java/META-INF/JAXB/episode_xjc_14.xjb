@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.05.23 a las 11:21:26 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://t4is.uv.mx/pinacoteca">
+    <schemaBindings map="false">
+      <package name="https.t4is_uv_mx.pinacoteca"/>
+    </schemaBindings>
+    <bindings scd="tns:BuscarRegistrosResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.BuscarRegistrosResponse"/>
+    </bindings>
+    <bindings scd="tns:BuscarReservacionesResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.BuscarReservacionesResponse"/>
+    </bindings>
+    <bindings scd="tns:ListarServicioResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.ListarServicioResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.RegistrarVisitantesRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.RegistrarVisitantesResponse"/>
+    </bindings>
+    <bindings scd="tns:ModificarRegistroRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.ModificarRegistroRequest"/>
+    </bindings>
+    <bindings scd="tns:ModificarRegistroResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.ModificarRegistroResponse"/>
+    </bindings>
+    <bindings scd="tns:BorrarRegistroRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.BorrarRegistroRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarRegistroResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.BorrarRegistroResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarReservacionesRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.RegistrarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarReservacionesResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.RegistrarReservacionesResponse"/>
+    </bindings>
+    <bindings scd="tns:BuscarReservacionesRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.BuscarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarReservacionesRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.BorrarReservacionesRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarReservacionesResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.BorrarReservacionesResponse"/>
+    </bindings>
+    <bindings scd="tns:AgregarServicioRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.AgregarServicioRequest"/>
+    </bindings>
+    <bindings scd="tns:AgregarServicioResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.AgregarServicioResponse"/>
+    </bindings>
+    <bindings scd="tns:EliminarServicioRequest">
+      <class ref="https.t4is_uv_mx.pinacoteca.EliminarServicioRequest"/>
+    </bindings>
+    <bindings scd="tns:EliminarServicioResponse">
+      <class ref="https.t4is_uv_mx.pinacoteca.EliminarServicioResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 07:43:11 PM CDT 
+// Generado el: 2022.05.24 a las 12:39:37 AM CDT 
 //
 
 
@@ -26,8 +26,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="estado" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="apellidos" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -39,18 +39,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "nombre",
-    "descripcion",
-    "estado"
+    "apellidos",
+    "fecha"
 })
-@XmlRootElement(name = "AgregarEventosRequest")
-public class AgregarEventosRequest {
+@XmlRootElement(name = "RegistrarArtistaRequest")
+public class RegistrarArtistaRequest {
 
     @XmlElement(required = true)
     protected String nombre;
     @XmlElement(required = true)
-    protected String descripcion;
+    protected String apellidos;
     @XmlElement(required = true)
-    protected String estado;
+    protected String fecha;
 
     /**
      * Obtiene el valor de la propiedad nombre.
@@ -77,51 +77,51 @@ public class AgregarEventosRequest {
     }
 
     /**
-     * Obtiene el valor de la propiedad descripcion.
+     * Obtiene el valor de la propiedad apellidos.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescripcion() {
-        return descripcion;
+    public String getApellidos() {
+        return apellidos;
     }
 
     /**
-     * Define el valor de la propiedad descripcion.
+     * Define el valor de la propiedad apellidos.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescripcion(String value) {
-        this.descripcion = value;
+    public void setApellidos(String value) {
+        this.apellidos = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad estado.
+     * Obtiene el valor de la propiedad fecha.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEstado() {
-        return estado;
+    public String getFecha() {
+        return fecha;
     }
 
     /**
-     * Define el valor de la propiedad estado.
+     * Define el valor de la propiedad fecha.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEstado(String value) {
-        this.estado = value;
+    public void setFecha(String value) {
+        this.fecha = value;
     }
 
 }

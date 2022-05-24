@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.19 a las 07:43:11 PM CDT 
+// Generado el: 2022.05.24 a las 12:39:37 AM CDT 
 //
 
 
@@ -27,8 +27,8 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="estado" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="acompañantes" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -41,19 +41,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "id",
     "nombre",
-    "descripcion",
-    "estado"
+    "fecha",
+    "acompa\u00f1antes"
 })
-@XmlRootElement(name = "EditarRequest")
-public class EditarRequest {
+@XmlRootElement(name = "RegistrarVisitantesRequest")
+public class RegistrarVisitantesRequest {
 
     protected int id;
     @XmlElement(required = true)
     protected String nombre;
     @XmlElement(required = true)
-    protected String descripcion;
-    @XmlElement(required = true)
-    protected String estado;
+    protected String fecha;
+    protected int acompañantes;
 
     /**
      * Obtiene el valor de la propiedad id.
@@ -96,51 +95,43 @@ public class EditarRequest {
     }
 
     /**
-     * Obtiene el valor de la propiedad descripcion.
+     * Obtiene el valor de la propiedad fecha.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescripcion() {
-        return descripcion;
+    public String getFecha() {
+        return fecha;
     }
 
     /**
-     * Define el valor de la propiedad descripcion.
+     * Define el valor de la propiedad fecha.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescripcion(String value) {
-        this.descripcion = value;
+    public void setFecha(String value) {
+        this.fecha = value;
     }
 
     /**
-     * Obtiene el valor de la propiedad estado.
+     * Obtiene el valor de la propiedad acompañantes.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getEstado() {
-        return estado;
+    public int getAcompañantes() {
+        return acompañantes;
     }
 
     /**
-     * Define el valor de la propiedad estado.
+     * Define el valor de la propiedad acompañantes.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setEstado(String value) {
-        this.estado = value;
+    public void setAcompañantes(int value) {
+        this.acompañantes = value;
     }
 
 }
