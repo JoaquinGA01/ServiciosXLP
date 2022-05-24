@@ -27,15 +27,14 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="visitante" maxOccurs="unbounded"&gt;
+ *         &lt;element name="Artista" maxOccurs="unbounded"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
- *                   &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *                   &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="apellidos" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                   &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="acompañantes" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
  *             &lt;/complexContent&gt;
@@ -51,41 +50,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "visitante"
+    "artista"
 })
-@XmlRootElement(name = "ListarVisitantesResponse")
-public class ListarVisitantesResponse {
+@XmlRootElement(name = "ListarArtistaResponse")
+public class ListarArtistaResponse {
 
-    @XmlElement(required = true)
-    protected List<ListarVisitantesResponse.Visitante> visitante;
+    @XmlElement(name = "Artista", required = true)
+    protected List<ListarArtistaResponse.Artista> artista;
 
     /**
-     * Gets the value of the visitante property.
+     * Gets the value of the artista property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the visitante property.
+     * This is why there is not a <CODE>set</CODE> method for the artista property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getVisitante().add(newItem);
+     *    getArtista().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ListarVisitantesResponse.Visitante }
+     * {@link ListarArtistaResponse.Artista }
      * 
      * 
      */
-    public List<ListarVisitantesResponse.Visitante> getVisitante() {
-        if (visitante == null) {
-            visitante = new ArrayList<ListarVisitantesResponse.Visitante>();
+    public List<ListarArtistaResponse.Artista> getArtista() {
+        if (artista == null) {
+            artista = new ArrayList<ListarArtistaResponse.Artista>();
         }
-        return this.visitante;
+        return this.artista;
     }
 
 
@@ -99,10 +98,9 @@ public class ListarVisitantesResponse {
      *   &lt;complexContent&gt;
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *       &lt;sequence&gt;
-     *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
      *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="apellidos" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="acompañantes" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
      *   &lt;/complexContent&gt;
@@ -113,35 +111,18 @@ public class ListarVisitantesResponse {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "id",
         "nombre",
-        "fecha",
-        "acompa\u00f1antes"
+        "apellidos",
+        "fecha"
     })
-    public static class Visitante {
+    public static class Artista {
 
-        protected int id;
         @XmlElement(required = true)
         protected String nombre;
         @XmlElement(required = true)
+        protected String apellidos;
+        @XmlElement(required = true)
         protected String fecha;
-        protected int acompañantes;
-
-        /**
-         * Obtiene el valor de la propiedad id.
-         * 
-         */
-        public int getId() {
-            return id;
-        }
-
-        /**
-         * Define el valor de la propiedad id.
-         * 
-         */
-        public void setId(int value) {
-            this.id = value;
-        }
 
         /**
          * Obtiene el valor de la propiedad nombre.
@@ -168,6 +149,30 @@ public class ListarVisitantesResponse {
         }
 
         /**
+         * Obtiene el valor de la propiedad apellidos.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getApellidos() {
+            return apellidos;
+        }
+
+        /**
+         * Define el valor de la propiedad apellidos.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setApellidos(String value) {
+            this.apellidos = value;
+        }
+
+        /**
          * Obtiene el valor de la propiedad fecha.
          * 
          * @return
@@ -189,22 +194,6 @@ public class ListarVisitantesResponse {
          */
         public void setFecha(String value) {
             this.fecha = value;
-        }
-
-        /**
-         * Obtiene el valor de la propiedad acompañantes.
-         * 
-         */
-        public int getAcompañantes() {
-            return acompañantes;
-        }
-
-        /**
-         * Define el valor de la propiedad acompañantes.
-         * 
-         */
-        public void setAcompañantes(int value) {
-            this.acompañantes = value;
         }
 
     }

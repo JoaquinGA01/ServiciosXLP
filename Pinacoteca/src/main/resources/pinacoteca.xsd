@@ -100,4 +100,22 @@
  </xs:element>
 
 
+ <xs:element name="ListarArtistaRequest"/> 
+ <xs:element name="ListarArtistaResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Artista" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="apellidos" type="xs:string"/>
+              <xs:element name="fecha" type="xs:string"/>
+             </xs:sequence>
+           </xs:complexType>
+       </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+
 </xs:schema>
