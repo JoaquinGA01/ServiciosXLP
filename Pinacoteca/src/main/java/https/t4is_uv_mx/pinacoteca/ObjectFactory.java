@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.24 a las 11:09:05 AM CDT 
+// Generado el: 2022.05.24 a las 11:19:18 AM CDT 
 //
 
 
@@ -32,6 +32,7 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _ListarEventoRequest_QNAME = new QName("https://t4is.uv.mx/pinacoteca", "ListarEventoRequest");
+    private final static QName _ListarVisitantesRequest_QNAME = new QName("https://t4is.uv.mx/pinacoteca", "ListarVisitantesRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: https.t4is_uv_mx.pinacoteca
@@ -46,6 +47,14 @@ public class ObjectFactory {
      */
     public ListarEventoResponse createListarEventoResponse() {
         return new ListarEventoResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarVisitantesResponse }
+     * 
+     */
+    public ListarVisitantesResponse createListarVisitantesResponse() {
+        return new ListarVisitantesResponse();
     }
 
     /**
@@ -105,6 +114,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ListarVisitantesResponse.Visitante }
+     * 
+     */
+    public ListarVisitantesResponse.Visitante createListarVisitantesResponseVisitante() {
+        return new ListarVisitantesResponse.Visitante();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      * 
      * @param value
@@ -115,6 +132,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "https://t4is.uv.mx/pinacoteca", name = "ListarEventoRequest")
     public JAXBElement<Object> createListarEventoRequest(Object value) {
         return new JAXBElement<Object>(_ListarEventoRequest_QNAME, Object.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "https://t4is.uv.mx/pinacoteca", name = "ListarVisitantesRequest")
+    public JAXBElement<Object> createListarVisitantesRequest(Object value) {
+        return new JAXBElement<Object>(_ListarVisitantesRequest_QNAME, Object.class, null, value);
     }
 
 }

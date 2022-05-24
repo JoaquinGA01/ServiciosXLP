@@ -27,17 +27,15 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="evento" maxOccurs="unbounded"&gt;
+ *         &lt;element name="visitante" maxOccurs="unbounded"&gt;
  *           &lt;complexType&gt;
  *             &lt;complexContent&gt;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
  *                   &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *                   &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                   &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="hora" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="costo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *                   &lt;element name="acompañantes" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
  *             &lt;/complexContent&gt;
@@ -53,41 +51,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "evento"
+    "visitante"
 })
-@XmlRootElement(name = "ListarEventoResponse")
-public class ListarEventoResponse {
+@XmlRootElement(name = "ListarVisitantesResponse")
+public class ListarVisitantesResponse {
 
     @XmlElement(required = true)
-    protected List<ListarEventoResponse.Evento> evento;
+    protected List<ListarVisitantesResponse.Visitante> visitante;
 
     /**
-     * Gets the value of the evento property.
+     * Gets the value of the visitante property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the evento property.
+     * This is why there is not a <CODE>set</CODE> method for the visitante property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getEvento().add(newItem);
+     *    getVisitante().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link ListarEventoResponse.Evento }
+     * {@link ListarVisitantesResponse.Visitante }
      * 
      * 
      */
-    public List<ListarEventoResponse.Evento> getEvento() {
-        if (evento == null) {
-            evento = new ArrayList<ListarEventoResponse.Evento>();
+    public List<ListarVisitantesResponse.Visitante> getVisitante() {
+        if (visitante == null) {
+            visitante = new ArrayList<ListarVisitantesResponse.Visitante>();
         }
-        return this.evento;
+        return this.visitante;
     }
 
 
@@ -103,10 +101,8 @@ public class ListarEventoResponse {
      *       &lt;sequence&gt;
      *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
      *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="descripcion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="hora" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="costo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+     *         &lt;element name="acompañantes" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
      *   &lt;/complexContent&gt;
@@ -119,23 +115,17 @@ public class ListarEventoResponse {
     @XmlType(name = "", propOrder = {
         "id",
         "nombre",
-        "descripcion",
         "fecha",
-        "hora",
-        "costo"
+        "acompa\u00f1antes"
     })
-    public static class Evento {
+    public static class Visitante {
 
         protected int id;
         @XmlElement(required = true)
         protected String nombre;
         @XmlElement(required = true)
-        protected String descripcion;
-        @XmlElement(required = true)
         protected String fecha;
-        @XmlElement(required = true)
-        protected String hora;
-        protected int costo;
+        protected int acompañantes;
 
         /**
          * Obtiene el valor de la propiedad id.
@@ -178,30 +168,6 @@ public class ListarEventoResponse {
         }
 
         /**
-         * Obtiene el valor de la propiedad descripcion.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDescripcion() {
-            return descripcion;
-        }
-
-        /**
-         * Define el valor de la propiedad descripcion.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDescripcion(String value) {
-            this.descripcion = value;
-        }
-
-        /**
          * Obtiene el valor de la propiedad fecha.
          * 
          * @return
@@ -226,43 +192,19 @@ public class ListarEventoResponse {
         }
 
         /**
-         * Obtiene el valor de la propiedad hora.
+         * Obtiene el valor de la propiedad acompañantes.
          * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
          */
-        public String getHora() {
-            return hora;
+        public int getAcompañantes() {
+            return acompañantes;
         }
 
         /**
-         * Define el valor de la propiedad hora.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setHora(String value) {
-            this.hora = value;
-        }
-
-        /**
-         * Obtiene el valor de la propiedad costo.
+         * Define el valor de la propiedad acompañantes.
          * 
          */
-        public int getCosto() {
-            return costo;
-        }
-
-        /**
-         * Define el valor de la propiedad costo.
-         * 
-         */
-        public void setCosto(int value) {
-            this.costo = value;
+        public void setAcompañantes(int value) {
+            this.acompañantes = value;
         }
 
     }
