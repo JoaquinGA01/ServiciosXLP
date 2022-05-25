@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.05.24 a las 07:48:03 PM CDT 
+// Generado el: 2022.05.24 a las 09:54:32 PM CDT 
 //
 
 
@@ -47,6 +47,14 @@ public class ObjectFactory {
      */
     public ListarEventoResponse createListarEventoResponse() {
         return new ListarEventoResponse();
+    }
+
+    /**
+     * Create an instance of {@link ModificarEventoRequest }
+     * 
+     */
+    public ModificarEventoRequest createModificarEventoRequest() {
+        return new ModificarEventoRequest();
     }
 
     /**
@@ -111,6 +119,22 @@ public class ObjectFactory {
      */
     public ListarEventoResponse.Evento createListarEventoResponseEvento() {
         return new ListarEventoResponse.Evento();
+    }
+
+    /**
+     * Create an instance of {@link ModificarEventoRequest.Evento }
+     * 
+     */
+    public ModificarEventoRequest.Evento createModificarEventoRequestEvento() {
+        return new ModificarEventoRequest.Evento();
+    }
+
+    /**
+     * Create an instance of {@link ModificarEventoResponse }
+     * 
+     */
+    public ModificarEventoResponse createModificarEventoResponse() {
+        return new ModificarEventoResponse();
     }
 
     /**
