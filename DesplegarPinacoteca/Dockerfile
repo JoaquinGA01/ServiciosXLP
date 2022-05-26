@@ -3,7 +3,7 @@ from rrojano/jdk8
 workdir /app
 
 cmd ["/app/script.sh"]
-add Biblioteca-0.0.1-SNAPSHOT.jar /app/Biblioteca-0.0.1-SNAPSHOT.jar
+add Pinacoteca-0.0.1-SNAPSHOT.jar /app/Pinacoteca-0.0.1-SNAPSHOT.jar
 run apt-get update
 RUN apt-get install -y mariadb-server
 add Script.sql /app/script.sql
