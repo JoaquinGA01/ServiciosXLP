@@ -1,18 +1,26 @@
 package mx.uv.RegistroVisitantes;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
+@Entity
 public class Visitante {
+
+    @Id
     private String id;
     private String Nombre;
     private String FechaHora;
-    private int team;
+    private String team;
 
-    
+    public Visitante(){
 
-    public Visitante(String nombre, int team) {
+        
+    }
+
+    public Visitante(String nombre, String team) {
         String letras = generarCodigoJugador();
         this.id = nombre+letras.charAt(0);
         this.Nombre = nombre;
@@ -45,11 +53,11 @@ public class Visitante {
         this.FechaHora = FechaHora;
     }
 
-    public int getTeam() {
+    public String getTeam() {
         return team;
     }
 
-    public void setTeam(int team) {
+    public void setTeam(String team) {
         this.team = team;
     }
 
