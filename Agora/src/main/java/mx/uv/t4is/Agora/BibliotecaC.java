@@ -8,8 +8,10 @@ public class BibliotecaC {
 
     @GetMapping("/")
     public String bienvenido(Model modelo){
-		modelo.addAttribute("Thnombre","");
+		//modelo.addAttribute("Thnombre","");
 		return "index.html";        
     }
 
 }
+
+
