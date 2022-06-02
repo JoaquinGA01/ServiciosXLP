@@ -25,9 +25,9 @@ public class RegistroControlador {
     }
 
     @GetMapping("/registrarVisitante")
-    public String saludarM(@RequestParam(name="nombre", defaultValue = "Sin nombre!!") String nombre,@RequestParam(name="team") String team) {
+    public String saludarM(@RequestParam(name="nombre", defaultValue = "Sin nombre!!") String nombre,@RequestParam(name="team") String team,@RequestParam(name="tipo") int tipo) {
         if(nombre!=null){
-            Visitante s = new Visitante(nombre, team);
+            Visitante s = new Visitante(nombre, team, tipo);
             ivistantes.save(s);
             saludos.add(s);
             return "Hola "+nombre + " - Nombre Registrado";

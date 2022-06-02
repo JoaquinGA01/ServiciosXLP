@@ -14,18 +14,30 @@ public class Visitante {
     private String Nombre;
     private String FechaHora;
     private String team;
-
+    private int tipo;
+    
     public Visitante(){
 
         
     }
 
-    public Visitante(String nombre, String team) {
+    public Visitante(String nombre, String team, int tipo) {
         String letras = generarCodigoJugador();
         this.id = nombre+letras.charAt(0);
         this.Nombre = nombre;
         this.team = team;
         this.FechaHora = obtenerFechaHora();
+        this.tipo = tipo;
+    }
+
+
+    
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
     public String getId() {
