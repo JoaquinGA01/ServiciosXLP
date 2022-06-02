@@ -2,6 +2,14 @@ body{
   background: #3399ff;
 }
 
+h1,h2, a{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+p, ol{
+  font-family: 'Roboto', sans-serif;
+}
 
 .circle{
   position: absolute;

@@ -8,28 +8,51 @@
     <title>Prueba de Pinacoteca</title>
 </head>
 <body>
-    <a href="/ws/pinacoteca.wsdl">ingresas al wsdl</a> 
+    <a href="https://pinacoteca-tis.herokuapp.com/ws/pinacoteca.wsdl">ingresas al wsdl</a> 
 
-    <h1 style="font-family:Comic Sans" text-align="center">Prueba de Pinacoteca</h1>
+    <h1 
     <p>La pinacoteca Diego Rivera trabaja con la administración y almacenamiento de datos constantes.
         Es por ello que require de un sistema que contenga los siguientes espacios:
     </p>
         <ol>
-            <li>Agregar Eventos</li>
-                <p>Su función es registrar y almacenar los datos de los eventos por presentar en donde se almacenaran los precios que tendra la entrada del evento, la fecha, una descripcion de este y el artista </p>   
-            <li>Listar Eventos</li>
-                <p>Muestra en una lista todos los eventos registrados </p>
-            <li>Listar Artista</li>
-                <p>Muestra en una lista todos los artistas registrados</p>
-            <li>Listar Visitantes</li>
-                <p>Muestra una lista de todos los visitantes registrados</p>
-            <li>Registrar Artista</li>
-                <p>Su función es registrar y almacenar los datos de los artistas por presentar</p>
-            <li>Registrar Visitantes</li>   
-                <p>Su función es registrar y almacenar los datos de los visitantes por presentar</p>
+            <li>Agregar Eventos:
+                Su función es registrar y almacenar los datos de los eventos por presentar en donde se almacenaran los precios que tendra la entrada del evento, la fecha, una descripcion de este y el artista</li>   
+            <li>Listar Eventos:
+                Muestra en una lista todos los eventos registrados</li>
+            <li>Listar Artista:
+                Muestra en una lista todos los artistas registrados</li>
+            <li>Listar Visitante: 
+                Muestra una lista de todos los visitantes registrados</li>
+            <li>Registrar Artista: 
+                Su función es registrar y almacenar los datos de los artistas por presentar</li>
+            <li>Registrar Visitantes:
+                Su función es registrar y almacenar los datos de los visitantes por presentar</li>
            
         </ol>
-
+    <script>
+ 
+    </script>
+    <div id="" role="dialog">
+        <form action="Registrar" method="POST" name="formulario">
+            <label for="xxx">Nombre:</label>
+            <br><br>
+                <input type="text" id="Nombre" name="saludador">
+                <label for="xxx">Descripcion:</label>
+                <br><br>
+                <input type="text" id="Decripcion" name="saludador">
+                <label for="xxx">Fecha:</label>
+                <input type="text" id="Fecha" name="saludador">
+                <br><br>
+                <label for="xxx">Hora:</label>
+                <input type="text" id="Hora" name="saludador">
+                <br><br>
+                <label for="xxx">Costo:</label>
+                <input type="text" id="Costo" name="saludador">
+                <br><br>
+                <button type="submit" name="btnSaludar">Saludar!!</button>
+        </form>
+    </div>
+   
 </body>
 <div class='ripple-background'>
     <div class='circle xxlarge shade1'></div>
