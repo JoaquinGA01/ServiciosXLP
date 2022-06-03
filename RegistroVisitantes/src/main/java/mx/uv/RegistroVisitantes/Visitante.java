@@ -14,14 +14,14 @@ public class Visitante {
     private String Nombre;
     private String FechaHora;
     private String team;
-    private int tipo;
+    private String tipo;
     
     public Visitante(){
 
         
     }
 
-    public Visitante(String nombre, String team, int tipo) {
+    public Visitante(String nombre, String team, String tipo) {
         String letras = generarCodigoJugador();
         this.id = nombre+letras.charAt(0);
         this.Nombre = nombre;
@@ -32,11 +32,11 @@ public class Visitante {
 
 
     
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
