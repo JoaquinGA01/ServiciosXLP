@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,7 +25,7 @@ public class RegistroControlador {
         return lista;
     }
 
-    @GetMapping("/registrarVisitante")
+    @PostMapping("/registrarVisitante")
     public String saludarM(@RequestParam(name="nombre", defaultValue = "Sin nombre!!") String nombre,@RequestParam(name="team") String team,@RequestParam(name="tipo") int tipo) {
         if(nombre!=null){
             Visitante s = new Visitante(nombre, team, tipo);
