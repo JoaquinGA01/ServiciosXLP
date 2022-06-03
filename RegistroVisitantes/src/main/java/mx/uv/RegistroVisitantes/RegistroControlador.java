@@ -20,8 +20,15 @@ public class RegistroControlador {
     private ArrayList<Visitante> saludos = new ArrayList<Visitante>();
 
     @GetMapping("/buscarVisitante")
-    public Iterable<Visitante> buscarSaludo() {
-        Iterable<Visitante> lista = ivistantes.findAll();
+    public String buscarSaludo(@RequestParam(name="Tipo", defaultValue = "Sin nombre!!") int tipo) {
+        Iterable<Visitante> lista2 = ivistantes.findAll();
+        String lista = "";
+
+        for(Visitante v : lista2){
+            if(v.getTipo()==tipo){
+                lista += v.toString();
+            }
+        }
         return lista;
     }
 
