@@ -30,10 +30,32 @@
            
         </ol>
     <script>
- 
+    function Registrar(){
+        $.soap({
+            url: 'https://pinacoteca-tis.herokuapp.com/ws/pinacoteca.wsdl',
+                method: 'AgregarEvento',
+            data: {
+                nombre: 'Joaquin',
+                Descripcion: 'Hi!',
+                Fecha: 'hoy',
+                Hora: 'ahora',
+                Costo: '45'
+            },
+            success: function (soapResponse) {
+                soapResponse.getString();
+    // do stuff with soapResponse
+    // if you want to have the response as JSON use soapResponse.toJSON();
+    // or soapResponse.toString() to get XML string
+    // or soapResponse.toXML() to get XML DOM
+            },
+            error: function (SOAPResponse) {
+    // show error
+            }
+        });
+    }
     </script>
     <div id="" role="dialog">
-        <form action="Registrar" method="POST" name="formulario">
+        <form name="formulario">
             <label for="xxx">Nombre:</label>
             <br><br>
                 <input type="text" id="Nombre" name="saludador">
@@ -49,7 +71,7 @@
                 <label for="xxx">Costo:</label>
                 <input type="text" id="Costo" name="saludador">
                 <br><br>
-                <button type="submit" name="btnSaludar">Saludar!!</button>
+                <button type="button" onclick="Registrar()" name="btnSaludar">Saludar!!</button>
         </form>
     </div>
    
