@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="all" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <title>Prueba de Pinacoteca</title>
 </head>
 <body>
@@ -30,7 +31,11 @@
            
         </ol>
     <script>
+        document.getElementById('btnGuardar').onclick = function(){
+            Registrar();
+        }
     function Registrar(){
+        
         $.soap({
             url: 'https://pinacoteca-tis.herokuapp.com/ws/pinacoteca.wsdl',
                 method: 'AgregarEvento',
@@ -52,6 +57,28 @@
     // show error
             }
         });
+
+        var client = new XMLHttpRequest();
+        client.open('POST', 'https://pinacoteca-tis.herokuapp.com/ws/pinacoteca.wsdl');
+        client.onreadystatechange = function () {
+            var request = client.responseText;//here the wsdl
+
+            //SOAP request
+            var client2 = new XMLHttpRequest();
+                client2.open('POST', 'http://83.212.96.238:8080/DgesvSampleWs/DgesvSampleWsService', true);
+
+        client2.onreadystatechange = function () {
+          if (client2.readyState == 4) {
+            if (client2.status == 200) {
+              console.log(client.responseText);//here the response
+            }
+          }
+        }
+        client2.setRequestHeader('Content-Type', 'text/xml');
+        client2.send(request);
+}
+
+client.send();
     }
     </script>
     <div id="" role="dialog">
@@ -71,7 +98,7 @@
                 <label for="xxx">Costo:</label>
                 <input type="text" id="Costo" name="saludador">
                 <br><br>
-                <button type="button" onclick="Registrar()" name="btnSaludar">Saludar!!</button>
+                <button type="button" id="btnGuardar" onclick="Registrar()" name="btnSaludar">Saludar!!</button>
         </form>
     </div>
    
