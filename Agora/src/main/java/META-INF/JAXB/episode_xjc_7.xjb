@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.06.02 a las 06:48:50 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://t4is.uv.mx/agora">
+    <schemaBindings map="false">
+      <package name="https.t4is_uv_mx.agora"/>
+    </schemaBindings>
+    <bindings scd="tns:ListarEventoResponse">
+      <class ref="https.t4is_uv_mx.agora.ListarEventoResponse"/>
+    </bindings>
+    <bindings scd="tns:ModificarEventoRequest">
+      <class ref="https.t4is_uv_mx.agora.ModificarEventoRequest"/>
+    </bindings>
+    <bindings scd="tns:ListarVisitantesResponse">
+      <class ref="https.t4is_uv_mx.agora.ListarVisitantesResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesRequest">
+      <class ref="https.t4is_uv_mx.agora.RegistrarVisitantesRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarVisitantesResponse">
+      <class ref="https.t4is_uv_mx.agora.RegistrarVisitantesResponse"/>
+    </bindings>
+    <bindings scd="tns:RegistrarPeliculaRequest">
+      <class ref="https.t4is_uv_mx.agora.RegistrarPeliculaRequest"/>
+    </bindings>
+    <bindings scd="tns:RegistrarPeliculaResponse">
+      <class ref="https.t4is_uv_mx.agora.RegistrarPeliculaResponse"/>
+    </bindings>
+    <bindings scd="tns:AgregarEventoRequest">
+      <class ref="https.t4is_uv_mx.agora.AgregarEventoRequest"/>
+    </bindings>
+    <bindings scd="tns:AgregarEventoResponse">
+      <class ref="https.t4is_uv_mx.agora.AgregarEventoResponse"/>
+    </bindings>
+    <bindings scd="tns:ModificarEventoResponse">
+      <class ref="https.t4is_uv_mx.agora.ModificarEventoResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
